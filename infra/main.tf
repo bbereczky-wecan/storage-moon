@@ -26,7 +26,7 @@ resource "azurerm_subscription" "storage" {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = lower("bicep_moon_storage_111_${azurerm_subscription.storage.subscription_id}")
+  name                     = "bicep_moon_storage_111_${azurerm_subscription.storage.subscription_id}"
   resource_group_name      = azurerm_resource_group.rg.name
   location                 = azurerm_resource_group.rg.location
   account_tier             = "Standard"
