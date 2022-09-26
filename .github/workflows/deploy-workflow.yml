@@ -20,7 +20,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
+
       - name: Azure Login
         uses: Azure/login@v1
         with:
@@ -35,7 +35,7 @@ jobs:
           # Provide the scope of the deployment. Valid values are: 'resourcegroup', 'managementgroup', 'subscription'
           scope: resourcegroup
           # Provide the name of a resource group, only required for resource Group deployments.
-          resourceGroupName: DeployRG-1
+          resourceGroupName: CloudSummit-01
           # Specify the path or URL to the Azure Resource Manager template.
           template: './storage.bicep'
       # Supply deployment parameter values.
